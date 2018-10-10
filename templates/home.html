@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>liveedu 博客 &#8211; 又一个WordPress站点</title>
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='twentyseventeen-style-css'
+          href='http://localhost/wordpress/wp-content/themes/twentyseventeen/style.css?ver=4.9.8' type='text/css'
+          media='all'/>
+    <!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyseventeen-ie8-css'  href='http://localhost/wordpress/wp-content/themes/twentyseventeen/assets/css/ie8.css?ver=1.0' type='text/css' media='all' />
+<![endif]-->
+    <!--[if lt IE 9]>
+<script type='text/javascript' src='http://localhost/wordpress/wp-content/themes/twentyseventeen/assets/js/html5.js?ver=3.7.3'></script>
+<![endif]-->
+    <script type='text/javascript' src='http://localhost/wordpress/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript'
+            src='http://localhost/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <style type="text/css">.recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }</style>
+</head>
+
+<body class="home blog hfeed has-header-image has-sidebar colors-light">
+<div id="page" class="site">
+    <a class="skip-link screen-reader-text" href="#content">跳至内容</a>
+
+    <header id="masthead" class="site-header" role="banner">
+
+        <div class="custom-header">
+
+            <div class="custom-header-media">
+                <div id="wp-custom-header" class="wp-custom-header"><img
+                        src="http://localhost/wordpress/wp-content/themes/twentyseventeen/assets/images/header.jpg"
+                        width="2000" height="1200" alt="liveedu 博客"/></div>
+            </div>
+
+            <div class="site-branding">
+                <div class="wrap">
+
+
+                    <div class="site-branding-text">
+                        <h1 class="site-title"><a href="http://localhost/wordpress/" rel="home">liveedu 博客</a></h1>
+
+                        <p class="site-description">又一个WordPress站点</p>
+                    </div><!-- .site-branding-text -->
+
+                    <a href="#content" class="menu-scroll-down">
+                        <svg class="icon icon-arrow-right" aria-hidden="true" role="img">
+                            <use href="#icon-arrow-right" xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                        <span class="screen-reader-text">向下滚动到内容</span></a>
+
+                </div><!-- .wrap -->
+            </div><!-- .site-branding -->
+
+        </div><!-- .custom-header -->
+
+
+    </header><!-- #masthead -->
+
+
+    <div class="site-content-contain">
+        <div id="content" class="site-content">
+
+            <div class="wrap">
+                <header class="page-header">
+                    <h2 class="page-title">文章</h2>
+                </header>
+
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main" role="main">
+
+                        {% for post in posts %}
+                            <article id="post-1"
+                                     class="post-1 post type-post status-publish format-standard hentry category-uncategorized">
+                                <header class="entry-header">
+                                    <div class="entry-meta"><span class="screen-reader-text">发布于</span><a
+                                            href="{{ post.get_absolute_url }}" rel="bookmark">
+                                        <time class="entry-date published updated" datetime="2018-10-10T10:57:00+08:00">
+                                            2018年10月10日
+                                        </time>
+                                    </a></div><!-- .entry-meta --><h3 class="entry-title"><a
+                                        href="{{ post.get_absolute_url }}"
+                                        rel="bookmark">{{ post.post_title }}</a></h3></header><!-- .entry-header -->
+
+                                <div class="entry-content">
+                                    <p>欢迎使用WordPress。这是您的第一篇文章。编辑或删除它，然后开始写作吧！</p>
+                                </div><!-- .entry-content -->
+
+
+                            </article><!-- #post-## -->
+                        {% endfor %}
+
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+
+                <aside id="secondary" class="widget-area" role="complementary" aria-label="博客边栏">
+                    <section id="meta-2" class="widget widget_meta"><h2 class="widget-title">功能</h2>
+                        <ul>
+                            <li><a href="http://localhost/wordpress/wp-login.php">登录</a></li>
+                            <li><a href="http://localhost/wordpress/feed/">文章<abbr
+                                    title="Really Simple Syndication">RSS</abbr></a></li>
+                            <li><a href="http://localhost/wordpress/comments/feed/">评论<abbr
+                                    title="Really Simple Syndication">RSS</abbr></a></li>
+                            <li><a href="https://cn.wordpress.org/"
+                                   title="基于WordPress，一个优美、先进的个人信息发布平台。">WordPress.org</a></li>
+                        </ul>
+                    </section>
+                    <section id="search-2" class="widget widget_search">
+
+                        <form role="search" method="get" class="search-form" action="http://localhost/wordpress/">
+                            <label for="search-form-5bbd9eadd0682">
+                                <span class="screen-reader-text">搜索：</span>
+                            </label>
+                            <input type="search" id="search-form-5bbd9eadd0682" class="search-field" placeholder="搜索…"
+                                   value="" name="s"/>
+                            <button type="submit" class="search-submit">
+                                <svg class="icon icon-search" aria-hidden="true" role="img">
+                                    <use href="#icon-search" xlink:href="#icon-search"></use>
+                                </svg>
+                                <span class="screen-reader-text">搜索</span></button>
+                        </form>
+                    </section>
+                    <section id="recent-posts-2" class="widget widget_recent_entries"><h2 class="widget-title">近期文章</h2>
+                        <ul>
+                            <li>
+                                <a href="http://localhost/wordpress/2018/10/10/111/">111</a>
+                            </li>
+                            <li>
+                                <a href="http://localhost/wordpress/2018/10/10/hello-world/">世界，您好！</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">
+                        近期评论</h2>
+                        <ul id="recentcomments">
+                            <li class="recentcomments"><span class="comment-author-link"><a
+                                    href='https://wordpress.org/' rel='external nofollow' class='url'>一位WordPress评论者</a></span>发表在《<a
+                                    href="http://localhost/wordpress/2018/10/10/hello-world/#comment-1">世界，您好！</a>》
+                            </li>
+                        </ul>
+                    </section>
+                    <section id="archives-2" class="widget widget_archive"><h2 class="widget-title">文章归档</h2>
+                        <ul>
+                            <li><a href='http://localhost/wordpress/2018/10/'>2018年十月</a></li>
+                        </ul>
+                    </section>
+                    <section id="categories-2" class="widget widget_categories"><h2 class="widget-title">分类目录</h2>
+                        <ul>
+                            <li class="cat-item cat-item-1"><a
+                                    href="http://localhost/wordpress/category/uncategorized/">未分类</a>
+                            </li>
+                        </ul>
+                    </section>
+                </aside><!-- #secondary -->
+            </div><!-- .wrap -->
+
+
+        </div><!-- #content -->
+
+        <footer id="colophon" class="site-footer" role="contentinfo">
+            <div class="wrap">
+
+                <div class="site-info">
+                    <a href="https://cn.wordpress.org/">自豪地采用WordPress</a>
+                </div><!-- .site-info -->
+            </div><!-- .wrap -->
+        </footer><!-- #colophon -->
+    </div><!-- .site-content-contain -->
+</div><!-- #page -->
+
+</body>
+</html>
